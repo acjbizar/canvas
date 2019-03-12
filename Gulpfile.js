@@ -9,16 +9,16 @@ gulp.task('templates', function() {
             // TODO: Feed it a file. (JSON? ini? YAML? Something else?)
             data: {
                 artist: {
-                    location: 'Den Haag, Nederland',
-                    name: 'Jan Janssen',
-                    twitter: 'deideenl',
-                    url: './',
+                    location: 'The Hague, Netherlands',
+                    name: 'Alexander Christiaan Jacob',
+                    twitter: 'ACJ',
+                    url: 'https://alexanderchristiaanjacob.com/'
                 },
                 artwork: {
                     dir: 'ltr',
-                    lang: 'nl',
+                    lang: 'en',
                     description: 'Blank canvas.',
-                    title: 'het Canvas',
+                    title: 'Canvas',
                     themeColor: 'white',
                     image: 'https://deidee.com/logo.png?str=hetcanvas',
                     url: './'
