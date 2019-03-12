@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <browserconfig>
     <msapplication>
         <tile>
-            <square70x70logo src="apple-touch-icon-precomposed.png"/>
-            <square150x150logo src="apple-touch-icon-precomposed.png"/>
-            <square310x310logo src="apple-touch-icon-precomposed.png"/>
-            <TileColor>#a00ade</TileColor>
+            <square70x70logo src="./apple-touch-icon-precomposed.png"/>
+            <square150x150logo src="./apple-touch-icon-precomposed.png"/>
+            <square310x310logo src="./apple-touch-icon-precomposed.png"/>
+            <TileColor>white</TileColor>
         </tile>
     </msapplication>
 </browserconfig>

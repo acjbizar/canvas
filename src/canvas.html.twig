@@ -1,55 +1,73 @@
 <!doctype html>
-<html dir="{{ artwork.dir|default('ltr') }}" lang="{{ artwork.lang|default('en') }}">
+<html dir="{{ artwork.dir|default('ltr') }}" lang="{{ artwork.lang|default('nl') }}">
 <head>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="application-name" content="{{ artwork.title }}">
     <meta name="description" content="{{ artwork.description }}">
-    <meta name="robots" content="all">
+    <meta name="msapplication-config" content="{{ artwork.url }}browserconfig.xml">
+    <meta name="robots" content="{{ artwork.robots|default('all') }}">
+    {%- if artwork.themeColor %}
     <meta name="theme-color" content="{{ artwork.themeColor }}">
+    {% endif -%}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ACJ">
-    <meta name="twitter:creator" content="@ACJ">
+    {%- if artist.twitter %}
+    <meta name="twitter:site" content="@{{ artist.twitter }}">
+    <meta name="twitter:creator" content="@{{ artist.twitter }}">
+    {% endif -%}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta property="fb:admins" content="509248955">
+    {%- if artist.facebook.id %}
+    <meta property="fb:admins" content="{{ artist.facebook.id }}">
+    {%- endif %}
     <meta property="og:description" content="{{ artwork.description }}">
+    {%- if artwork.image %}
     <meta property="og:image" content="{{ artwork.image }}">
+    {%- endif %}
     <meta property="og:title" content="{{ artwork.title }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ artwork.url }}">
     <title>{{ artwork.title }}</title>
     <link rel="apple-touch-icon-precomposed" href="{{ artwork.url }}apple-touch-icon-precomposed.png">
-    <link rel="author" href="https://alexanderchristiaanjacob.com/" title="Alexander Christiaan Jacob">
+    {%- if artist.url and artist.name %}
+    <link rel="author" href="{{ artist.url }}" title="{{ artist.name }}">
+    {%- elseif artist.url %}
+    <link rel="author" href="{{ artist.url }}" title="{{ artist.name }}">
+    {%- elseif artist.name %}
+    <meta name="author" content="{{ artist.name }}">
+    {%- endif %}
     <link rel="canonical" href="{{ artwork.url }}">
     <link rel="manifest" href="{{ artwork.url }}manifest.json">
-    {% if artwork.style %}
-        <style>
-            {{ artwork.style }}
-        </style>
-    {% endif %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6227584-61"></script>
+    {%- if block('style') is defined %}
+    <style>
+    {% block style %}{% endblock %}
+    </style>
+    {% endif -%}
+    {%- if gtm %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ gtm }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-6227584-61');
+        gtag('config', '{{ gtm }}');
     </script>
+    {%- endif %}
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "VisualArtwork",
             "name": "{{ artwork.title }}",
-            "image": "{{ artwork.image }}",
+            {%- if artwork.image %}
+            "image": "{{ artwork.image }}",{% endif %}
             "description": "{{ artwork.description }}",
             "url": "{{ artwork.url }}",
             "creator": [
                 {
                     "@type": "Person",
-                    "name": "Alexander Christiaan Jacob",
-                    "url": "https://alexanderchristiaanjacob.com/",
-                    "sameAs": "https://twitter.com/acj"
+                    "name": "{{ artist.name }}",
+                    "url": "{{ artist.url }}"{% if artist.twitter %},
+                    "sameAs": "https://twitter.com/{{ artist.twitter|lower }}"{% endif %}
                 }
             ],
             "artform": "website",
@@ -59,6 +77,11 @@
     </script>
 </head>
 <body id="top">
-{% block body %}{{ body }}{% endblock %}
+{%- block body %}{{ body }}{% endblock -%}
+{%- if block('script') is defined %}
+<script>
+{% block script %}{% endblock %}
+</script>
+{% endif -%}
 </body>
 </html>

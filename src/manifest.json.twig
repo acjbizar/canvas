@@ -1,5 +1,19 @@
 {
+    "manifest_version": 2,
+    "version": "{{ 'now'|date('U') }}",
     "name": "{{ artwork.title }}",
+    "default_locale": "{{ artwork.lang }}",
     "description": "{{ artwork.description }}",
-    "theme_color": "{{ artwork.themeColor }}"
+    {%- if artist.name %}
+    "author": "{{ artist.name }}",
+    {%- endif %}
+    "theme_color": "{{ artwork.themeColor }}",
+    "homepage_url": "{{ artwork.url }}",
+    "start_url": "{{ artwork.url }}",
+    "icons": [
+        {
+            "src": "{{ artwork.url }}apple-touch-icon-precomposed.png"
+        }
+    ],
+    "display": "fullscreen"
 }

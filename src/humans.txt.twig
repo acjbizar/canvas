@@ -1,10 +1,10 @@
 
 /* TEAM */
-    Artist: Alexander Christiaan Jacob
-    Site: https://alexanderchristiaanjacob.com/
-    Twitter: @ACJ
-    Location: The Hague, Netherlands
+    Artist: {{ artist.name }}
+    Site: {{ artist.url }}
+    {% if artist.twitter %}Twitter: @{{ artist.twitter }}{% endif %}
+    Location: {{ artist.location }}
 
 /* SITE */
-    Standards: HTML, CSS
-    IDE: PhpStorm
+    Standards: HTML, CSS, OGP
+    Preprocessing: Gulp, Twig

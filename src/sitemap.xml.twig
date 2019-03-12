@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>{{ artwork.url }}</loc>
-        <lastmod>{{ artwork.lastmod }}</lastmod>
+        <lastmod>{{ "now"|date("Y-m-d") }}</lastmod>
         <changefreq>{{ artwork.changefreq|default('never') }}</changefreq>
         <priority>1.0</priority>
     </url>

@@ -1,10 +1,10 @@
 
 /* TEAM */
-    Artist: Alexander Christiaan Jacob
-    Site: https://alexanderchristiaanjacob.com/
-    Twitter: @ACJ
-    Location: The Hague, Netherlands
+    Artist: Jan Janssen
+    Site: ./
+    Twitter: @deideenl
+    Location: Den Haag, Nederland
 
 /* SITE */
-    Standards: HTML, CSS
-    IDE: PhpStorm
+    Standards: HTML, CSS, OGP
+    Preprocessing: Gulp, Twig

@@ -1,5 +1,17 @@
 {
-    "name": "canvas",
+    "manifest_version": 2,
+    "version": "1552383368",
+    "name": "het Canvas",
+    "default_locale": "nl",
     "description": "Blank canvas.",
-    "theme_color": "#a00ade"
+    "author": "Jan Janssen",
+    "theme_color": "white",
+    "homepage_url": "./",
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "./apple-touch-icon-precomposed.png"
+        }
+    ],
+    "display": "fullscreen"
 }

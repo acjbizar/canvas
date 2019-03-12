@@ -1,4 +1,12 @@
 {% extends "canvas.html.twig" %}
 {% block body %}
-<h1>Hello, Canvas!</h1>
+<h1>Hallo, canvas!</h1>
+{% endblock %}
+{% block script %}
+"use strict";
+{% endblock %}
+{% block style %}
+    html {
+    background: {{ artwork.themeColor }};
+    }
 {% endblock %}
