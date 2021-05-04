@@ -15,7 +15,7 @@ De volgende bestanden worden door het templatesysteem gegenereerd:
 - `robots.txt`
 - `sitemap.xml`
 
-# Installeren
+## Installeren
 
 De installatie gaat er vanuit dat [git](https://git-scm.com/), [Node.js](https://nodejs.org/) en [npm](https://www.npmjs.com/) reeds beschikbaar zijn. In dat geval zijn slechts twee instructies nodig:
 
@@ -24,7 +24,7 @@ git clone git@github.com:deidee/hetcanvas.git
 npm install
 ```
 
-# Configuren
+## Configureren
 
 In het bestand `Gulpfile.js` kun je in de variabele `data` alle relevante gegevens van de kunstenaar en het kunstwerk kwijt. Standaard bevat het de volgende data:
 
@@ -50,7 +50,7 @@ data: {
 }
 ```
 
-# Vullen
+## Vullen
 
 Door het configureren van de `Gruntfile.js` wordt alle relevante metadata op de juiste plek gezet, maar dan heb je alleen nog een blanco canvas.
 
@@ -70,7 +70,7 @@ Het daadwerkelijke kunstwerk zal in de meeste gevallen bestaan uit opmaak (HTML)
 {% endblock %}
 ```
 
-# Compileren
+## Compileren
 
 Als de `Gruntfile.js` is geconfigureerd en de `index.html.twig` gevuld kan het geheel worden gecompileerd met de volgende instructie:
 
@@ -80,10 +80,18 @@ gulp templates
 
 De resultaten worden weggeschreven in de map `dist`. Dit zijn de bestanden die je kunt uploaden naar de plek waar de website moet draaien.
 
-# TODO
+## TODO
 
 Bestanden die nog geen onderdeel zijn van het systeem, maar we wel willen toevoegen:
 
 - `apple-touch-icon-precomposed.png`
 - `favicon.ico`
 - `sw.js` (ServiceWorker)
+
+### Overwegen
+
+Bestanden die toegevoegd zouden kunnen worden, maar we nog niet zeker over zijn:
+
+- `.well-known/security.txt`
+- ``README.md``
+- ``crossdomain.xml``
