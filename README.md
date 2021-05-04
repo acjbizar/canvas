@@ -7,6 +7,7 @@ Templates voor kunstwebsites. Maakt dankbaar gebruik van [Twig](https://twig.sym
 De volgende bestanden worden door het templatesysteem gegenereerd:
 
 - `404.html`
+- `ads.txt`
 - `browserconfig.xml`
 - `humans.txt`
 - `index.html`
