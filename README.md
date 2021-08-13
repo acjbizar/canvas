@@ -14,45 +14,47 @@ De volgende bestanden worden door het templatesysteem gegenereerd:
 - `manifest.json`
 - `robots.txt`
 - `sitemap.xml`
+- `.well-known/security.txt`
 
 ## Installeren
 
-De installatie gaat er vanuit dat [git](https://git-scm.com/), [Node.js](https://nodejs.org/) en [npm](https://www.npmjs.com/) reeds beschikbaar zijn. In dat geval zijn slechts twee instructies nodig:
+De installatie gaat ervan uit dat [git](https://git-scm.com/), [Node.js](https://nodejs.org/) en [npm](https://www.npmjs.com/) reeds beschikbaar zijn. In dat geval zijn slechts twee instructies nodig:
 
 ```Shell
-git clone git@github.com:deidee/hetcanvas.git
+git clone git@github.com:acjbizar/canvas.git
 npm install
 ```
 
 ## Configureren
 
-In het bestand `Gulpfile.js` kun je in de variabele `data` alle relevante gegevens van de kunstenaar en het kunstwerk kwijt. Standaard bevat het de volgende data:
+In het bestand `data.json` kun je alle relevante gegevens van de kunstenaar en het kunstwerk kwijt. Standaard bevat het de volgende data:
 
-```JavaScript
-data: {
-    artist: {
-        location: 'Den Haag, Nederland',
-        name: 'Jan Janssen',
-        twitter: 'deideenl',
-        url: './',
+```json
+{
+    "artist": {
+        "email": "ego@acjs.net",
+            "location": "The Hague, Netherlands",
+            "name": "Alexander Christiaan Jacob",
+            "twitter": "ACJ",
+            "url": "https://alexanderchristiaanjacob.com/"
     },
-    artwork: {
-        dir: 'ltr',
-        lang: 'nl',
-        description: 'Blank canvas.',
-        title: 'het Canvas',
-        themeColor: 'white',
-        image: 'https://deidee.com/logo.png?str=hetcanvas',
-        url: './'
+    "artwork": {
+        "dir": "ltr",
+            "lang": "en",
+            "description": "Blank canvas.",
+            "title": "Canvas",
+            "themeColor": "white",
+            "image": "https://deidee.com/logo.png?str=hetcanvas",
+            "url": "./"
     },
-    body: '<h1>Hallo, wereld!</h1>',
-    gtm: 'UA-6227584-61'
+    "body": "<h1>Hallo, wereld!</h1>",
+        "gtm": "UA-6227584-61"
 }
 ```
 
 ## Vullen
 
-Door het configureren van de `Gruntfile.js` wordt alle relevante metadata op de juiste plek gezet, maar dan heb je alleen nog een blanco canvas.
+Door het configureren van de `data.json` wordt alle relevante metadata op de juiste plek gezet, maar dan heb je alleen nog een blanco canvas.
 
 Het daadwerkelijke kunstwerk zal in de meeste gevallen bestaan uit opmaak (HTML), vormgeving (CSS) en acties (JavaScript). Dit kun je toevoegen in `src/index.html.twig` en wel op de volgende plekken:
 
@@ -92,6 +94,5 @@ Bestanden die nog geen onderdeel zijn van het systeem, maar we wel willen toevoe
 
 Bestanden die toegevoegd zouden kunnen worden, maar we nog niet zeker over zijn:
 
-- `.well-known/security.txt`
 - ``README.md``
 - ``crossdomain.xml``
