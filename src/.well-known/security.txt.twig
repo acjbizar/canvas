@@ -1,0 +1,4 @@
+Contact: mailto:{{ artist.email }}
+Expires: {{ "now"|date_modify("+1 year")|date("c") }}
+Preferred-Languages: {{ artwork.lang|default('lang') }}
+Canonical: {{ artwork.url }}.well-known/security.txt

@@ -1,0 +1,4 @@
+Contact: mailto:ego@acjs.net
+Expires: 2022-08-13T17:18:11+02:00
+Preferred-Languages: en
+Canonical: ./.well-known/security.txt
