@@ -31,24 +31,24 @@ In het bestand `data.json` kun je alle relevante gegevens van de kunstenaar en h
 
 ```json
 {
-    "artist": {
-        "email": "ego@acjs.net",
-            "location": "The Hague, Netherlands",
-            "name": "Alexander Christiaan Jacob",
-            "twitter": "ACJ",
-            "url": "https://alexanderchristiaanjacob.com/"
-    },
-    "artwork": {
-        "dir": "ltr",
-            "lang": "en",
-            "description": "Blank canvas.",
-            "title": "Canvas",
-            "themeColor": "white",
-            "image": "https://deidee.com/logo.png?str=hetcanvas",
-            "url": "./"
-    },
-    "body": "<h1>Hallo, wereld!</h1>",
-        "gtm": "UA-6227584-61"
+  "artist": {
+    "email": "ego@acjs.net",
+    "location": "The Hague, Netherlands",
+    "name": "Alexander Christiaan Jacob",
+    "twitter": "ACJ",
+    "url": "https://alexanderchristiaanjacob.com/"
+  },
+  "artwork": {
+    "dir": "ltr",
+    "lang": "en",
+    "description": "Blank canvas.",
+    "title": "Canvas",
+    "themeColor": "white",
+    "image": "https://deidee.com/logo.png?str=hetcanvas",
+    "url": "./"
+  },
+  "body": "<h1>Hallo, wereld!</h1>",
+  "gtm": "UA-6227584-61"
 }
 ```
 
