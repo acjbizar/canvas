@@ -9,6 +9,7 @@ De volgende bestanden worden door het templatesysteem gegenereerd:
 - `404.html`
 - `ads.txt`
 - `browserconfig.xml`
+- ``crossdomain.xml``
 - `humans.txt`
 - `index.html`
 - `manifest.json`
@@ -94,5 +95,5 @@ Bestanden die nog geen onderdeel zijn van het systeem, maar we wel willen toevoe
 
 Bestanden die toegevoegd zouden kunnen worden, maar we nog niet zeker over zijn:
 
+- ``opensearch.xml``
 - ``README.md``
-- ``crossdomain.xml``
