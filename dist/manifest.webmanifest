@@ -2,6 +2,10 @@
     "lang": "en",
     "dir": "ltr",
     "name": "Canvas",
+    "icons": [{
+        "src": "./apple-touch-icon-precomposed.png"
+    }],
     "scope": "/",
+    "id": "./",
     "theme_color": "white"
 }
