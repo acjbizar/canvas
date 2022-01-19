@@ -32,12 +32,12 @@
     {%- if artist.url and artist.name %}
     <link rel="author" href="{{ artist.url }}" title="{{ artist.name }}">
     {%- elseif artist.url %}
-    <link rel="author" href="{{ artist.url }}" title="{{ artist.name }}">
+    <link rel="author" href="{{ artist.url }}">
     {%- elseif artist.name %}
     <meta name="author" content="{{ artist.name }}">
     {%- endif %}
     <link rel="canonical" href="{{ artwork.url }}">
-    <link rel="manifest" href="{{ artwork.url }}manifest.json">
+    <link rel="manifest" href="{{ artwork.url }}manifest.webmanifest">
     {%- if block('style') is defined %}
     <style>
     {% block style %}{% endblock %}
