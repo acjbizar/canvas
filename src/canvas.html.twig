@@ -54,26 +54,9 @@
     </script>
     {%- endif %}
     <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "VisualArtwork",
-            "name": "{{ artwork.title }}",
-            {%- if artwork.image %}
-            "image": "{{ artwork.image }}",{% endif %}
-            "description": "{{ artwork.description }}",
-            "url": "{{ artwork.url }}",
-            "creator": [
-                {
-                    "@type": "Person",
-                    "name": "{{ artist.name }}",
-                    "url": "{{ artist.url }}"{% if artist.twitter %},
-                    "sameAs": "https://twitter.com/{{ artist.twitter|lower }}"{% endif %}
-                }
-            ],
-            "artform": "website",
-            "accessModeSufficient": "visual",
-            "interactivityType": "mixed"
-        }
+
+        {% include "_schema.json.twig" %}
+
     </script>
 </head>
 <body id="top">

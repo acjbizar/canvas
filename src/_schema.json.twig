@@ -1,0 +1,36 @@
+{
+    "@context": "http://schema.org",
+    "@type": "VisualArtwork",
+    "name": "{{ artwork.title }}",
+    {%- if artwork.image %}
+    "image": "{{ artwork.image }}",{% endif %}
+    "description": "{{ artwork.description }}",
+    "url": "{{ artwork.url }}",
+    {%- if artist.url or artist.name %}
+    "creator": [
+        {
+            "@type": "Person",
+            {% if artist.name %}
+            "name": "{{ artist.name }}",
+            {% endif %}
+            {% if artist.url %}
+            "url": "{{ artist.url }}"{% if artist.twitter %},
+            {% endif %}
+            "sameAs": "https://twitter.com/{{ artist.twitter|lower }}"{% endif %}
+        }
+    ],
+    {% endif %}
+{%- if offer %}
+    "offers": [
+        {
+            "@type": "Offer",
+            "price": "{{ offer.price }}",
+            "priceCurrency": "{{ offer.currency }}"
+        }
+    ],
+{% endif %}
+    "artMedium": "digital",
+    "artform": "website",
+    "accessModeSufficient": "visual",
+    "interactivityType": "mixed"
+}

@@ -9,7 +9,7 @@ De volgende bestanden worden door het templatesysteem gegenereerd:
 - `404.html`
 - `ads.txt`
 - `browserconfig.xml`
-- ``crossdomain.xml``
+- `crossdomain.xml`
 - `humans.txt`
 - `index.html`
 - `manifest.json`

@@ -1,14 +1,14 @@
 
 "use strict";
 
-var gulp = require('gulp');
-var twig = require('gulp-twig');
-var data = require('gulp-data');
-var fs = require('fs');
+const gulp = require('gulp');
+const twig = require('gulp-twig');
+const data = require('gulp-data');
+const fs = require('fs');
 
 // Compile Twig templates to HTML
 gulp.task('templates', function() {
-    return gulp.src(['./src/**/*.twig', '!src/canvas.html.twig'], { dot: true })
+    return gulp.src(['./src/**/*.twig', '!src/_*.twig', '!src/canvas.html.twig'], { dot: true })
         .pipe(data(function(file) {
             return JSON.parse(fs.readFileSync('data.json'));
         }))
