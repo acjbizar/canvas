@@ -1,6 +1,7 @@
 {
     "@context": "http://schema.org",
-    "@type": "VisualArtwork",
+    "@type": "Product",
+    "additionalType": "VisualArtwork",
     "name": "{{ artwork.title }}",
     {%- if artwork.image %}
     "image": "{{ artwork.image }}",{% endif %}
@@ -10,10 +11,10 @@
     "creator": [
         {
             "@type": "Person",
-            {% if artist.name %}
+            {%- if artist.name %}
             "name": "{{ artist.name }}",
             {% endif %}
-            {% if artist.url %}
+            {%- if artist.url %}
             "url": "{{ artist.url }}"{% if artist.twitter %},
             {% endif %}
             "sameAs": "https://twitter.com/{{ artist.twitter|lower }}"{% endif %}
@@ -24,6 +25,7 @@
     "offers": [
         {
             "@type": "Offer",
+            "availability": "https://schema.org/InStock",
             "price": "{{ offer.price }}",
             "priceCurrency": "{{ offer.currency }}"
         }

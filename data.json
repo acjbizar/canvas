@@ -16,8 +16,8 @@
     "url": "./"
   },
   "offer": {
-    "price": 1,
-    "currency": "ETH"
+    "price": 1024,
+    "currency": "USD"
   },
   "body": "<h1>Hallo, wereld!</h1>",
   "gtm": "UA-6227584-61"
