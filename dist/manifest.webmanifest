@@ -1,7 +1,9 @@
 {
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "lang": "en",
     "dir": "ltr",
     "name": "Canvas",
+    "display": "fullscreen",
     "icons": [{
         "src": "./apple-touch-icon-precomposed.png"
     }],
