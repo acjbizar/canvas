@@ -8,7 +8,7 @@ const fs = require('fs');
 
 // Compile Twig templates to HTML
 gulp.task('templates', function() {
-    return gulp.src(['./src/**/*.twig', '!src/_*.twig', '!src/canvas.html.twig'], { dot: true })
+    return gulp.src(['./src/**/*.twig', '!src/_*.twig', '!src/canvas.html.twig', '!src/layouts/**/*.twig'], { dot: true })
         .pipe(data(function(file) {
             return JSON.parse(fs.readFileSync('data.json'));
         }))

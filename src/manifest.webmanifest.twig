@@ -1,13 +1,16 @@
 {
-    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "$schema": "https:\/\/json.schemastore.org\/web-manifest-combined.json",
     "lang": "{{ artwork.lang }}",
     "dir": "{{ artwork.dir }}",
     "name": "{{ artwork.title }}",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [{
-        "src": "{{ artwork.url }}apple-touch-icon-precomposed.png"
+        "src": "{{ artwork.url }}apple-touch-icon-precomposed.png",
+        "type":"image\/png"
     }],
-    "scope": "/",
+    "start_url": ".",
+    "scope": "\/",
     "id": "{{ artwork.url }}",
-    "theme_color": "{{ artwork.themeColor }}"
+    "theme_color": "{{ artwork.themeColor }}",
+    "background_color": "black"
 }
